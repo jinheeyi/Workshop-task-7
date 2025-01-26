@@ -22,7 +22,7 @@ constructor(x, y) {
 - https://www.youtube.com/watch?v=n3s-yOCH638
 - (this youtube clip on how to gradually change color during a short period.)
 (screenshot of the youtube)
-- Functioning on workshop 6, 
+- Functioning on workshop 6, I decided to make this code that works similar for workshop-task-0 
 
 
 
