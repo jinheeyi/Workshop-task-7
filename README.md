@@ -21,5 +21,14 @@ constructor(x, y) {
 - https://p5js.org/reference/p5/color/
 - https://www.youtube.com/watch?v=n3s-yOCH638
 - (this youtube clip on how to gradually change color during a short period.)
+(screenshot of the youtube)
+- Functioning on workshop 6, 
+
+
+
+
+
 
 ## Conclusion(+further improvement)
+- I am quite impressed on how the ball turned out with bright colours flashing just like the first workshop (the butterfly motion). I am also getting used to it and learning about the code too. 
+- For further updates, I will try to make somethi
