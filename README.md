@@ -21,9 +21,22 @@ constructor(x, y) {
 - https://p5js.org/reference/p5/color/
 - https://www.youtube.com/watch?v=n3s-yOCH638
 - (this youtube clip on how to gradually change color during a short period.)
-(screenshot of the youtube)
-- Functioning on workshop 6, I decided to make this code that works similar for workshop-task-0 
+![Capture](https://github.com/user-attachments/assets/ea4cfbee-6c79-4227-9396-f98da89f3acd)
+![Capture1](https://github.com/user-attachments/assets/493c69e3-a924-4341-8c29-6896c639ae4e)
+(demonstrates on how the circle would change colour from time to time and plus similar copying on what she did for the colour code)
+- Functioning on workshop 6, I decided to make this code that works similar for workshop-task-0, which is including setting up the width, height, speed, even planning a circle.
 
+**creating a circle**
+```ruby
+let x,y;//position of the circle
+let radius=50;//radius of the circle
+let xSpeed, ySpeed;//speed of the circle movement
+let circleColor;//color fo the circle
+```
+![Capture2](https://github.com/user-attachments/assets/31abd31e-2819-4d2f-921b-050f1b7b3559)
+
+
+```ruby
 
 
 
