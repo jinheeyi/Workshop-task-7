@@ -60,7 +60,18 @@ function draw() {
   );
   background(bgColor);
 ```
+- I decided to make just one simple color on the background, which was this code and the color that I needed.
 
+```ruby
+function setup() {
+  createCanvas(100, 100);
+
+  // Integer RGBA notation.
+  background('rgba(0, 255, 0, 0.25)');
+
+  describe('A canvas with a transparent green background.');
+}
+```
 ![Screenshot 2025-01-28 152713](https://github.com/user-attachments/assets/b8043d09-80dd-495e-9552-81626bfed3a9)
 
 
