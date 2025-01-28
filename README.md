@@ -36,7 +36,7 @@ let circleColor;//color fo the circle
 ![Screenshot 2025-01-28 145608](https://github.com/user-attachments/assets/00b538d6-b3f3-40ca-b0b2-5df396599471)
 ![Capture2](https://github.com/user-attachments/assets/31abd31e-2819-4d2f-921b-050f1b7b3559)
 ![Screenshot 2025-01-28 151126](https://github.com/user-attachments/assets/9f2e271b-f6a7-4c56-9b98-ab0afef6dabf)
-**_here's another method on making multiple bouncy balls, which I really liked, so I thought maybe making multiple shapes, using this method would be good._**
+**_here's another method on making multiple bouncy balls, which I really liked, so I thought maybe making multiple shapes, using this method would be good to my thinking._**
 
 **first step**
 ![Screenshot 2025-01-28 151313](https://github.com/user-attachments/assets/35d7490f-4807-4021-a1ea-0ded2a14e609)
@@ -46,50 +46,71 @@ let circleColor;//color fo the circle
 - For the shapes, I asked chatgpt 'how to add shapes around the screen?' and showed like this:
 
 ```ruby
-let squareX, squareY, squareSize, squareColor;
-let triangleX, triangleY, triangleSize, triangleColor;
+// Square properties
+let squareX, squareY, squareSize, squareColor, squareXSpeed, squareYSpeed;
+
+// Triangle properties
+let triangleX, triangleY, triangleSize, triangleColor, triangleXSpeed, triangleYSpeed;
+
+// Line properties
 let lineStartX, lineStartY, lineEndX, lineEndY, lineColor;
+let lineXSpeed, lineYSpeed, lineX2Speed, lineY2Speed;
 ```
 ```ruby
    updateShapes();
 }
 ```
 ```ruby
-  // Draw the square
+  // Draw and move the square
     fill(squareColor);
     noStroke();
     rect(squareX, squareY, squareSize, squareSize);
+    squareX += squareXSpeed;
+    squareY += squareYSpeed;
+    if (squareX <= 0 || squareX + squareSize >= width) squareXSpeed = -squareXSpeed;
+    if (squareY <= 0 || squareY + squareSize >= height) squareYSpeed = -squareYSpeed;
 
-    // Draw the triangle
+    // Draw and move the triangle
     fill(triangleColor);
     noStroke();
     triangle(triangleX, triangleY, 
              triangleX + triangleSize, triangleY, 
              triangleX + triangleSize / 2, triangleY - triangleSize);
-/ Draw the line
+    triangleX += triangleXSpeed;
+    triangleY += triangleYSpeed;
+    if (triangleX <= 0 || triangleX + triangleSize >= width) triangleXSpeed = -triangleXSpeed;
+    if (triangleY - triangleSize <= 0 || triangleY >= height) triangleYSpeed = -triangleYSpeed;
+
+    // Draw and move the line
     stroke(lineColor);
     strokeWeight(2);
     line(lineStartX, lineStartY, lineEndX, lineEndY);
+    lineStartX += lineXSpeed;
+    lineStartY += lineYSpeed;
+    lineEndX += lineX2Speed;
+    lineEndY += lineY2Speed;
+    if (lineStartX <= 0 || lineStartX >= width) lineXSpeed = -lineXSpeed;
+    if (lineStartY <= 0 || lineStartY >= height) lineYSpeed = -lineYSpeed;
+    if (lineEndX <= 0 || lineEndX >= width) lineX2Speed = -lineX2Speed;
+    if (lineEndY <= 0 || lineEndY >= height) lineY2Speed = -lineY2Speed;
 ```
 ```ruby
-// Update shapes every 120 frames (~2 seconds at 60 fps)
-    if (frameCount % 120 === 0) {
-        updateShapes();
-    }
-}
-
 function updateShapes() {
     // Random properties for the square
-    squareX = random(width);
-    squareY = random(height);
+    squareX = random(width - 50);
+    squareY = random(height - 50);
     squareSize = random(50, 150);
     squareColor = color(random(255), random(255), random(255));
+    squareXSpeed = random(-3, 3);
+    squareYSpeed = random(-3, 3);
 
     // Random properties for the triangle
-    triangleX = random(width);
-    triangleY = random(height);
+    triangleX = random(width - 50);
+    triangleY = random(height - 50);
     triangleSize = random(50, 150);
     triangleColor = color(random(255), random(255), random(255));
+    triangleXSpeed = random(-3, 3);
+    triangleYSpeed = random(-3, 3);
 
     // Random properties for the line
     lineStartX = random(width);
@@ -97,13 +118,28 @@ function updateShapes() {
     lineEndX = random(width);
     lineEndY = random(height);
     lineColor = color(random(255), random(255), random(255));
+    lineXSpeed = random(-3, 3);
+    lineYSpeed = random(-3, 3);
+    lineX2Speed = random(-3, 3);
+    lineY2Speed = random(-3, 3);
 }
 ```
-- these codes are all adding the shapes, using lerp(), and timelapse on the timing when it appears for the shapes and the lines.
-
+- these codes are all adding the shapes, using speed and the start, and random properties for all the shapes. It was quite hard at first, but I understood on where how the first code:
+```ruby
+ fill(circleColor);
+    noStroke();
+    ellipse(x, y, radius * 2);
+    x += xSpeed;
+    y += ySpeed;
+    if (x - radius <= 0 || x + radius >= width) xSpeed = -xSpeed;
+    if (y - radius <= 0 || y + radius >= height) ySpeed = -ySpeed;
+```
+are same to the other codes for the square, triangle and the line. 
+![Screenshot 2025-01-28 155959](https://github.com/user-attachments/assets/43e7706d-131e-4358-9169-adc82194bf41)
+**this is the first code without any moving for the shape.**
 ![Screenshot 2025-01-28 160420](https://github.com/user-attachments/assets/0a51d9b0-09cd-4486-b8de-6fd1757fc592)
 ![Screenshot 2025-01-28 152713](https://github.com/user-attachments/assets/b8043d09-80dd-495e-9552-81626bfed3a9)
-![Screenshot 2025-01-28 155959](https://github.com/user-attachments/assets/43e7706d-131e-4358-9169-adc82194bf41)
+
 ## Conclusion(+further improvement)
 - I am quite impressed on how the ball turned out with bright colours flashing just like the first workshop (the butterfly motion), even the various shapes. I am also getting used to it and learning about the code too. 
 - For further updates, I will try to make somethi
