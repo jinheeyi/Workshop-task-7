@@ -139,7 +139,8 @@ are same to the other codes for the square, triangle and the line.
 **this is the first code without any moving for the shape.**
 ![Screenshot 2025-01-28 160420](https://github.com/user-attachments/assets/0a51d9b0-09cd-4486-b8de-6fd1757fc592)
 ![Screenshot 2025-01-28 152713](https://github.com/user-attachments/assets/b8043d09-80dd-495e-9552-81626bfed3a9)
+**_with major big changes, somehow the code was a huge success._**
+![Screenshot 2025-01-28 175924](https://github.com/user-attachments/assets/93eef85c-46c6-4f06-8246-efaf66fc2ed2)
 
 ## Conclusion(+further improvement)
-- I am quite impressed on how the ball turned out with bright colours flashing just like the first workshop (the butterfly motion), even the various shapes. I am also getting used to it and learning about the code too. 
-- For further updates, I will try to make somethi
+- I am quite impressed on how the ball turned out with bright colours flashing just like the first workshop (the butterfly motion), even the various shapes. I am also getting used to it and learning about the code too.
