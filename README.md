@@ -1,4 +1,4 @@
-Website link:
+Website link: https://jinheeyi.github.io/Workshop-task-7/
 
 ## Intro
 - I successfully completed nearly all tasks for 'Workshop Week 1 and 2,' gaining experience in creating animations, working with text and language, and incorporating interactive elements like recording graphs and textboxes. Next is working on with stimulation, realizing there's many options on stimulation for example; gravity, water(fluid) and train etc. I decided to make a ball stimulation, mainly focusing on moving ball physics and the gravity on how the ball plunges or directions. And additionally, changing the colour, including the background. Checking on www.google.com, to get examples of the ball simulation and there was some good examples from p5.js.
