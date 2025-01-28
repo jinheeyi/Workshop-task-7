@@ -99,18 +99,7 @@ function updateShapes() {
     lineColor = color(random(255), random(255), random(255));
 }
 ```
-- these codes are all adding the shapes, using lerp(), and timelapse on the timing when it appears for the shapes and the lines. While searching the codes, I just recognized maybe adding another moving diamond shape will make the sketch on what I wanted.
-- Again, this is the same code for
-```ruby
-function setup() {
-    createCanvas(200, 400);
-    x = width / 2;
-    y = height / 2;
-    xSpeed = random(-3, 3);
-    ySpeed = random(-3, 3);
-    circleColor = color(random(255), random(255), random(255));
-```
-- but as on writing on the diamond code. (diamondColor)
+- these codes are all adding the shapes, using lerp(), and timelapse on the timing when it appears for the shapes and the lines.
 
 ![Screenshot 2025-01-28 160420](https://github.com/user-attachments/assets/0a51d9b0-09cd-4486-b8de-6fd1757fc592)
 ![Screenshot 2025-01-28 152713](https://github.com/user-attachments/assets/b8043d09-80dd-495e-9552-81626bfed3a9)
