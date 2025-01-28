@@ -39,6 +39,47 @@ let circleColor;//color fo the circle
 
 
 
+｀｀｀ruby
+let x, y;        // Position of the circle
+let radius = 50; // Radius of the circle
+let xSpeed, ySpeed;  // Speed of the circle movement
+let circleColor; // Color of the circle
+
+function setup() {
+  createCanvas(800, 800); // Set the canvas size
+  x = width / 2;           // Start position at the center
+  y = height / 2;
+  xSpeed = random(-3, 3);  // Random speed in the X direction
+  ySpeed = random(-3, 3);  // Random speed in the Y direction
+  circleColor = color(random(255), random(255), random(255)); // Random initial color
+}
+
+function draw() {
+  background(255); // Clear the background
+  
+  // Draw the circle
+  fill(circleColor);
+  noStroke();
+  ellipse(x, y, radius * 2);
+
+  // Move the circle
+  x += xSpeed;
+  y += ySpeed;
+
+  // Check for collisions with the borders
+  if (x - radius <= 0 || x + radius >= width) {
+    xSpeed = -xSpeed; // Reverse X direction
+    circleColor = color(random(255), random(255), random(255)); // Change color
+  }
+  
+  if (y - radius <= 0 || y + radius >= height) {
+    ySpeed = -ySpeed; // Reverse Y direction
+    circleColor = color(random(255), random(255), random(255)); // Change color
+  }
+}
+```
+
+
 ## Conclusion(+further improvement)
 - I am quite impressed on how the ball turned out with bright colours flashing just like the first workshop (the butterfly motion). I am also getting used to it and learning about the code too. 
 - For further updates, I will try to make somethi
