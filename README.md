@@ -33,11 +33,8 @@ let radius=50;//radius of the circle
 let xSpeed, ySpeed;//speed of the circle movement
 let circleColor;//color fo the circle
 ```
+![Screenshot 2025-01-28 145608](https://github.com/user-attachments/assets/00b538d6-b3f3-40ca-b0b2-5df396599471)
 ![Capture2](https://github.com/user-attachments/assets/31abd31e-2819-4d2f-921b-050f1b7b3559)
-
-
-```ruby
-
 
 
 
