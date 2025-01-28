@@ -43,8 +43,76 @@ let circleColor;//color fo the circle
 
 **second step**
 - The second step that I wanted to experience is putting on more shapes, just like on workshop 1. https://github.com/jinheeyi/Workshop-task-1 (showing many different shapes popping out from the screen). I thought of making the similar version for this workshop, and decided to make shapes floating around the screen (fully).
-- For the shapes, I 
+- For the shapes, I asked chatgpt 'how to add shapes around the screen?' and showed like this:
 
+```ruby
+let squareX, squareY, squareSize, squareColor;
+let triangleX, triangleY, triangleSize, triangleColor;
+let lineStartX, lineStartY, lineEndX, lineEndY, lineColor;
+```
+```ruby
+   updateShapes();
+}
+```
+```ruby
+  // Draw the square
+    fill(squareColor);
+    noStroke();
+    rect(squareX, squareY, squareSize, squareSize);
+
+    // Draw the triangle
+    fill(triangleColor);
+    noStroke();
+    triangle(triangleX, triangleY, 
+             triangleX + triangleSize, triangleY, 
+             triangleX + triangleSize / 2, triangleY - triangleSize);
+/ Draw the line
+    stroke(lineColor);
+    strokeWeight(2);
+    line(lineStartX, lineStartY, lineEndX, lineEndY);
+```
+```ruby
+// Update shapes every 120 frames (~2 seconds at 60 fps)
+    if (frameCount % 120 === 0) {
+        updateShapes();
+    }
+}
+
+function updateShapes() {
+    // Random properties for the square
+    squareX = random(width);
+    squareY = random(height);
+    squareSize = random(50, 150);
+    squareColor = color(random(255), random(255), random(255));
+
+    // Random properties for the triangle
+    triangleX = random(width);
+    triangleY = random(height);
+    triangleSize = random(50, 150);
+    triangleColor = color(random(255), random(255), random(255));
+
+    // Random properties for the line
+    lineStartX = random(width);
+    lineStartY = random(height);
+    lineEndX = random(width);
+    lineEndY = random(height);
+    lineColor = color(random(255), random(255), random(255));
+}
+```
+- these codes are all adding the shapes, using lerp(), and timelapse on the timing when it appears for the shapes and the lines. While searching the codes, I just recognized maybe adding another moving diamond shape will make the sketch on what I wanted.
+- Again, this is the same code for
+```ruby
+function setup() {
+    createCanvas(200, 400);
+    x = width / 2;
+    y = height / 2;
+    xSpeed = random(-3, 3);
+    ySpeed = random(-3, 3);
+    circleColor = color(random(255), random(255), random(255));
+```
+- but as on writing on the diamond code. (diamondColor)
+
+![Screenshot 2025-01-28 160420](https://github.com/user-attachments/assets/0a51d9b0-09cd-4486-b8de-6fd1757fc592)
 ![Screenshot 2025-01-28 152713](https://github.com/user-attachments/assets/b8043d09-80dd-495e-9552-81626bfed3a9)
 
 
