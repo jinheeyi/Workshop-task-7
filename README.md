@@ -41,6 +41,29 @@ let circleColor;//color fo the circle
 **first step**
 ![Screenshot 2025-01-28 151313](https://github.com/user-attachments/assets/35d7490f-4807-4021-a1ea-0ded2a14e609)
 
+**second step**
+- The second step that I wanted to experience is putting on more shapes, just like on workshop 1. https://github.com/jinheeyi/Workshop-task-1 (showing many different shapes popping out from the screen). I thought of making the similar version for this workshop, and decided to make shapes floating around the screen (fully). And even adding the colourful background too. For the background, I looked back at _Workshop 0_ on what code I made for the background, which was
+
+```ruby
+let bgColor; 
+```
+```ruby
+  bgColor = color(30, 30, 60);
+}
+
+function draw() {
+
+  bgColor = color(
+    map(butterflyX, 0, width, 50, 150), 
+    map(butterflyY, 0, height, 50, 200), 
+    map(butterflyX + butterflyY, 0, width + height, 100, 255) 
+  );
+  background(bgColor);
+```
+
+![Screenshot 2025-01-28 152713](https://github.com/user-attachments/assets/b8043d09-80dd-495e-9552-81626bfed3a9)
+
+
 ## Conclusion(+further improvement)
-- I am quite impressed on how the ball turned out with bright colours flashing just like the first workshop (the butterfly motion). I am also getting used to it and learning about the code too. 
+- I am quite impressed on how the ball turned out with bright colours flashing just like the first workshop (the butterfly motion), even the various shapes. I am also getting used to it and learning about the code too. 
 - For further updates, I will try to make somethi
