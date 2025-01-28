@@ -37,6 +37,8 @@ let circleColor;//color fo the circle
 ![Capture2](https://github.com/user-attachments/assets/31abd31e-2819-4d2f-921b-050f1b7b3559)
 ![Screenshot 2025-01-28 151126](https://github.com/user-attachments/assets/9f2e271b-f6a7-4c56-9b98-ab0afef6dabf)
 **_here's another method on making multiple bouncy balls, which I really liked, so I thought maybe making multiple shapes, using this method would be good._**
+**first step**
+![Screenshot 2025-01-28 151313](https://github.com/user-attachments/assets/35d7490f-4807-4021-a1ea-0ded2a14e609)
 
 ## Conclusion(+further improvement)
 - I am quite impressed on how the ball turned out with bright colours flashing just like the first workshop (the butterfly motion). I am also getting used to it and learning about the code too. 
